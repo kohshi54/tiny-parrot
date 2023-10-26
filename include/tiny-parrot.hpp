@@ -7,7 +7,7 @@
 # include <sstream>
 # include <algorithm>
 
-typedef struct s_resister
+typedef struct s_resisters
 {
     const static uint32_t   x0 = 0;
     static uint32_t         x1;
