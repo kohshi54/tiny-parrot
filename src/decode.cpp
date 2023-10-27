@@ -2,9 +2,9 @@
 
 bool    decode_addi(std::string instr)
 {
-    std::stringstream operands = static_cast<std::stringstream>(&instr[instr.find(" ")]);
-    std::string rd, rs1, rs2;
-    std::string *reg[] = {&rd, &rs1, &rs2};
+    std::stringstream operands(instr.substr(instr.find(" ") + 1));
+    std::string rd, rs1, imm;
+    std::string *reg[] = {&rd, &rs1, &imm};
     for (int i = 0; i < 3; ++i)
     {
         getline(operands, *reg[i], ',');
@@ -15,7 +15,7 @@ bool    decode_addi(std::string instr)
         }
         reg[i]->erase(std::remove(reg[i]->begin(), reg[i]->end(), ' '), reg[i]->end());
     }
-    std::cout << rd << " " << rs1 << " " << rs2 << std::endl;
+    std::cout << rd << " " << rs1 << " " << imm << std::endl;
     return true;
 }
 
