@@ -1,6 +1,7 @@
 #include "tiny-parrot.hpp"
 
 Register regs;
+uint32_t pc = 0;
 
 int main(int argc, char *argv[])
 {
@@ -24,5 +25,7 @@ int main(int argc, char *argv[])
         std::cout << regs.read("a5") << "<<<<<<<<<<<<" << std::endl;
         std::cout << regs.read("a4") << "<<<<<<<<<<<<" << std::endl;
         std::cout << "--------------" << std::endl;
+        pc += 1;
     }
+    std::cout << pc << std::endl;
 }
