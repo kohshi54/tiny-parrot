@@ -13,7 +13,11 @@ int main(int argc, char *argv[])
     std::string instr;
     while (std::getline(file, instr))
     {
-        decode(instr);
+        if (!decode(instr))
+        {
+            std::cout << "execption occurred, abort." << std::endl;
+            return (1);
+        }
         std::cout << "--------------" << std::endl;
     }
 }
