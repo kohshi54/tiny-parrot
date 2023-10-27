@@ -6,6 +6,7 @@
 # include <string>
 # include <sstream>
 # include <algorithm>
+# include "register.hpp"
 
 bool    decode(std::string instr);
 

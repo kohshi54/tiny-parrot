@@ -1,5 +1,7 @@
 #include "tiny-parrot.hpp"
 
+Register regs;
+
 int main(int argc, char *argv[])
 {
     if (argc != 2)
@@ -18,6 +20,9 @@ int main(int argc, char *argv[])
             std::cout << "execption occurred, abort." << std::endl;
             return (1);
         }
+
+        std::cout << regs.read("a5") << "<<<<<<<<<<<<" << std::endl;
+        std::cout << regs.read("a4") << "<<<<<<<<<<<<" << std::endl;
         std::cout << "--------------" << std::endl;
     }
 }

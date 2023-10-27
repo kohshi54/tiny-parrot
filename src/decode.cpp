@@ -1,5 +1,7 @@
 #include "tiny-parrot.hpp"
 
+extern Register regs;
+
 bool    decode_addi(std::string instr)
 {
     std::stringstream operands(instr.substr(instr.find(" ") + 1));
@@ -15,7 +17,9 @@ bool    decode_addi(std::string instr)
         }
         reg[i]->erase(std::remove(reg[i]->begin(), reg[i]->end(), ' '), reg[i]->end());
     }
+    regs.write(rd, regs.read(rs1) + stoi(imm));
     std::cout << rd << " " << rs1 << " " << imm << std::endl;
+    std::cout << rd << " = " << regs.read(rd) << std::endl;
     return true;
 }
 
@@ -34,7 +38,9 @@ bool    decode_add(std::string instr)
         }
         reg[i]->erase(std::remove(reg[i]->begin(), reg[i]->end(), ' '), reg[i]->end());
     }
+    regs.write(rd, regs.read(rs1) + regs.read(rs2));
     std::cout << rd << " " << rs1 << " " << rs2 << std::endl;
+    std::cout << rd << " = " << regs.read(rs1) << std::endl;
     return true;
 }
 
