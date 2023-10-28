@@ -1,7 +1,4 @@
 addi a5, a5, 12
 addi a4, a4, 3
 add a4, a4, a5
-mul a4, a4, a3
-mv a0, a4
-sd ra,8(sp)
-ld ra,8(sp)
+sub a4, a4, a5
