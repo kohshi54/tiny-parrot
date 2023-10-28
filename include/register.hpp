@@ -1,8 +1,9 @@
 #ifndef Resister_HPP
 #define Resister_HPP
 
-#include <string>
-#include <iostream>
+# include <string>
+# include <iostream>
+# include <iomanip>
 
 class Register
 {
