@@ -2,9 +2,8 @@
 
 extern Register regs;
 
-bool    decode_addi(std::string instr)
+bool decode_i_type(std::string &opcode, std::stringstream &operands)
 {
-    std::stringstream operands(instr.substr(instr.find(" ") + 1));
     std::string rd, rs1, imm;
     std::string *reg[] = {&rd, &rs1, &imm};
     for (int i = 0; i < 3; ++i)
@@ -17,15 +16,14 @@ bool    decode_addi(std::string instr)
         }
         reg[i]->erase(std::remove(reg[i]->begin(), reg[i]->end(), ' '), reg[i]->end());
     }
-    regs.write(rd, regs.read(rs1) + stoi(imm));
+    execute_i_type(imm, rs1, rd, opcode);
     std::cout << rd << " " << rs1 << " " << imm << std::endl;
     std::cout << rd << " = " << regs.read(rd) << std::endl;
     return true;
 }
 
-bool    decode_add(std::string instr)
+bool decode_r_type(std::string &opcode, std::stringstream &operands)
 {
-    std::stringstream operands(instr.substr(instr.find(" ") + 1));
     std::string rd, rs1, rs2;
     std::string *reg[] = {&rd, &rs1, &rs2};
     for (int i = 0; i < 3; ++i)
@@ -38,21 +36,29 @@ bool    decode_add(std::string instr)
         }
         reg[i]->erase(std::remove(reg[i]->begin(), reg[i]->end(), ' '), reg[i]->end());
     }
-    regs.write(rd, regs.read(rs1) + regs.read(rs2));
+    execute_r_type(rs2, rs1, rd, opcode);
     std::cout << rd << " " << rs1 << " " << rs2 << std::endl;
     std::cout << rd << " = " << regs.read(rs1) << std::endl;
     return true;
 }
 
-bool    decode(std::string instr)
+bool decode(std::string instr)
 {
     std::cout << instr << std::endl;
     std::string opcode = instr.substr(0, instr.find(" "));
     std::cout << opcode << std::endl;
-    if (!opcode.compare("addi"))
-        return decode_addi(instr);
-    if (!opcode.compare("add"))
-        return decode_add(instr);
+    std::stringstream operands(instr.substr(instr.find(" ") + 1));
+    switch (get_format(opcode))
+    {
+        case instr_type::I_type:
+            decode_i_type(opcode, operands);
+            break ;
+        case instr_type::R_type:
+            decode_r_type(opcode, operands);
+            break ;
+        default:
+            break ;
+    }
 
     return (true);
 }
