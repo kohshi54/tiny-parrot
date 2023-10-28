@@ -22,6 +22,18 @@ https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf#page=116
 ```
 ADDI rd, rs1, imm -> rd = rs1 + imm
 ```
+### ANDI
+```
+ANDI rd, rs1, imm -> rd = rs1 & imm
+```
+### ORI
+```
+ORI rd, rs1, imm -> rd = rs1 | imm
+```
+### XORI
+```
+XORI rd, rs1, imm -> rd = rs1 ^ imm
+```
 
 ## R-type Instruction
 ### ADD
@@ -32,5 +44,17 @@ ADD rd, rs1, rs2 -> rd = rs1 + rs2
 ```
 SUB rd, rs1, rs2 -> rd = rs1 - rs2
 ```
-
+### AND
+```
+AND rd, rs1, rs2 -> rd = rs1 & rs2
+```
+* note that the AND and similar operation in RISC-V is bitwise operation. not logical.
+### OR
+```
+OR rd, rs1, rs2 -> rd = rs1 | rs2
+```
+### XOR
+```
+XOR rd, rs1, rs2 -> rd = rs1 ^ rs2
+```
 
