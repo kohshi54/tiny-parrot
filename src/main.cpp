@@ -27,5 +27,6 @@ int main(int argc, char *argv[])
         std::cout << "--------------" << std::endl;
         pc += 1;
     }
+    regs.dump_registers();
     std::cout << pc << std::endl;
 }

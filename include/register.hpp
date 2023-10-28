@@ -2,12 +2,14 @@
 #define Resister_HPP
 
 #include <string>
+#include <iostream>
 
 class Register
 {
     public:
         uint32_t read(std::string abi);
         void write(std::string abi, uint32_t data);
+        void dump_registers();
 
     private:
         const uint32_t   x0 = 0;
