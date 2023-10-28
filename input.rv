@@ -2,3 +2,7 @@ addi a5, a5, 12
 addi a4, a4, 3
 add a4, a4, a5
 sub a4, a4, a5
+addi a1, a1, 1
+and a2, a1, a4
+or a0, a1, a4
+xor t0, a1, a4
