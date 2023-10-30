@@ -28,6 +28,11 @@ bool execute_r_type(std::string rs2, std::string rs1, std::string rd, std::strin
         regs.write(rd, regs.read(rs1) | regs.read(rs2));
     else if (!opcode.compare("xor"))
         regs.write(rd, regs.read(rs1) ^ regs.read(rs2));
-    
+    else if (!opcode.compare("sll"))
+        regs.write(rd, regs.read(rs1) << regs.read(rs2));
+    else if (!opcode.compare("sra")) // cast rs1 to (int 64) from (uint 32) in order to make shift arithmatic and cause sign extension.
+        regs.write(rd, (int64_t)regs.read(rs1) >> regs.read(rs2));
+    else if (!opcode.compare("srl"))
+        regs.write(rd, regs.read(rs1) >> regs.read(rs2));
     return true;
 }

@@ -72,6 +72,7 @@ uint32_t Register::read(std::string abi)
 void Register::write(std::string abi, uint32_t data)
 {
     if (!abi.compare("zero")) // do nothing
+        ;
     if (!abi.compare("ra")) // return address
         x1 = data;
     if (!abi.compare("sp")) // stack pointer
