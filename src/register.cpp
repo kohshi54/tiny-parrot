@@ -1,6 +1,6 @@
 #include "register.hpp"
 
-uint32_t Register::read(std::string abi)
+int32_t Register::read(std::string abi)
 {
     if (!abi.compare("zero")) // always return zero
         return x0;
@@ -69,7 +69,7 @@ uint32_t Register::read(std::string abi)
     return (0);
 }
 
-void Register::write(std::string abi, uint32_t data)
+void Register::write(std::string abi, int32_t data)
 {
     if (!abi.compare("zero")) // do nothing
         ;
@@ -148,7 +148,7 @@ void Register::dump_registers()
         "t3", "t4", "t5", "t6"
     };
 
-    const uint32_t *reg_array[] = {
+    const int32_t *reg_array[] = {
         &x0, &x1, &x2, &x3, &x4, &x5, &x6, &x7, &x8, &x9,
         &x10, &x11, &x12, &x13, &x14, &x15, &x16, &x17, &x18, &x19,
         &x20, &x21, &x22, &x23, &x24, &x25, &x26, &x27, &x28, &x29,
