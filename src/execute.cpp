@@ -12,7 +12,12 @@ bool execute_i_type(std::string imm, std::string rs1, std::string rd, std::strin
         regs.write(rd, regs.read(rs1) | stoi(imm));
     else if (!opcode.compare("xori"))
         regs.write(rd, regs.read(rs1) ^ stoi(imm));
-
+    else if (!opcode.compare("slli")) // cast rs1 to (uint 32) from (int 32) in order to make shift logical and not cause sign extension.
+        regs.write(rd, (uint32_t)regs.read(rs1) << stoi(imm));
+    else if (!opcode.compare("srai"))
+        regs.write(rd, regs.read(rs1) >> stoi(imm));
+    else if (!opcode.compare("srli")) // cast rs1 to (uint 32) from (int 32) in order to make shift logical and not cause sign extension.
+        regs.write(rd, (uint32_t)regs.read(rs1) >> stoi(imm));
     return true;
 }
 
