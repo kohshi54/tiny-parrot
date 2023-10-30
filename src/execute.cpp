@@ -41,3 +41,12 @@ bool execute_r_type(std::string rs2, std::string rs1, std::string rd, std::strin
         regs.write(rd, (uint32_t)regs.read(rs1) >> regs.read(rs2));
     return true;
 }
+
+bool execute_u_type(std::string imm, std::string rd, std::string opcode)
+{
+    if (!opcode.compare("lui"))
+        regs.write(rd, (int32_t)stoi(imm) << 12); // sign extension and then shift left 12 bits.
+    else if (!opcode.compare("auipc"))
+        regs.write(rd, regs.pc + ((int32_t)stoi(imm) << 12)); // sign extension and then shift left 12 bits.
+    return true;
+}

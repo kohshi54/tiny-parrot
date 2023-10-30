@@ -42,6 +42,26 @@ bool decode_r_type(std::string &opcode, std::stringstream &operands)
     return true;
 }
 
+bool decode_u_type(std::string &opcode, std::stringstream &operands)
+{
+    std::string rd, imm;
+    std::string *reg[] = {&rd, &imm};
+    for (int i = 0; i < 2; ++i)
+    {
+        getline(operands, *reg[i], ',');
+        if (operands.eof() && i != 1)
+        {
+            std::cout << "invalid oprand in lui" << std::endl;
+            return false;
+        }
+        reg[i]->erase(std::remove(reg[i]->begin(), reg[i]->end(), ' '), reg[i]->end());
+    }
+    execute_u_type(imm, rd, opcode);
+    std::cout << rd << " " << imm << std::endl;
+    std::cout << rd << " = " << regs.read(rd) << std::endl;
+    return true;
+}
+
 bool decode(std::string instr)
 {
     std::cout << instr << std::endl;
@@ -55,6 +75,9 @@ bool decode(std::string instr)
             break ;
         case instr_type::R_type:
             decode_r_type(opcode, operands);
+            break ;
+        case instr_type::U_type:
+            decode_u_type(opcode, operands);
             break ;
         default:
             break ;

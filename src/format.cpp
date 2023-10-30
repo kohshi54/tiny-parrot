@@ -17,11 +17,19 @@ bool is_r_type(std::string opcode)
     return r_types.count(opcode) > 0;
 };
 
+bool is_u_type(std::string opcode)
+{
+    static const std::unordered_set<std::string> u_types = {"lui", "auipc"};
+    return u_types.count(opcode) > 0;
+}
+
 instr_type get_format(std::string opcode)
 {
     if (is_i_type(opcode))
         return instr_type::I_type;
     if (is_r_type(opcode))
         return instr_type::R_type;
+    if (is_u_type(opcode))
+        return instr_type::U_type;
     return instr_type::NOP;
 }

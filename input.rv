@@ -15,3 +15,5 @@ addi t6, t6, -4
 sll t5, t6, a1
 sra t4, t6, a1
 srl t3, t6, a1
+lui a7, 1
+auipc t0, 1

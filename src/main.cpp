@@ -1,7 +1,6 @@
 #include "tiny-parrot.hpp"
 
 Register regs;
-uint32_t pc = 0;
 
 int main(int argc, char *argv[])
 {
@@ -25,8 +24,8 @@ int main(int argc, char *argv[])
         std::cout << regs.read("a5") << "<<<<<<<<<<<<" << std::endl;
         std::cout << regs.read("a4") << "<<<<<<<<<<<<" << std::endl;
         std::cout << "--------------" << std::endl;
-        pc += 1; // modify this to 4 byte alligned later.
+        regs.pc += 1; // modify this to 4 byte alligned later.
     }
     regs.dump_registers();
-    std::cout << pc << std::endl;
+    std::cout << regs.pc << std::endl;
 }

@@ -11,6 +11,7 @@ class Register
         int32_t read(std::string abi);
         void write(std::string abi, int32_t data);
         void dump_registers();
+        uint32_t pc = 0;
 
     private:
         const int32_t   x0 = 0;
