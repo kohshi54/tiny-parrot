@@ -7,11 +7,7 @@ bool execute_i_type(std::string imm, std::string rs1, std::string rd, std::strin
     if (!opcode.compare("addi"))
         regs.write(rd, regs.read(rs1) + stoi(imm));
     else if (!opcode.compare("andi"))
-    {
-        std::cout << rs1 << std::endl;
-        std::cout << regs.read(rs1) << " " << stoi(imm) << std::endl;
         regs.write(rd, regs.read(rs1) & stoi(imm));
-    }
     else if (!opcode.compare("ori"))
         regs.write(rd, regs.read(rs1) | stoi(imm));
     else if (!opcode.compare("xori"))
