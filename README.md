@@ -37,19 +37,19 @@ ORI rd, rs1, imm -> rd = rs1 | imm
 XORI rd, rs1, imm -> rd = rs1 ^ imm
 ```
 
-## SLLI
+### SLLI
 ```
 SLL rd, rs1, rs2 -> rd = rs1 << rs2
 ```
 * note that in order to perform logical operation, the operand value should be cast to (uint 32).
 
-## SRAI
+### SRAI
 ```
 SRA rd, rs1, rs2 -> rd = rs1 >> rs2
 ```
 * perform arithmatic shift, which means sign extension is operated during the operatin.
 
-## SRLI
+### SRLI
 ```
 SRL rd, rs1, rs2 -> rd = rs1 >> rs2
 ```
@@ -78,19 +78,32 @@ OR rd, rs1, rs2 -> rd = rs1 | rs2
 XOR rd, rs1, rs2 -> rd = rs1 ^ rs2
 ```
 
-## SLL
+### SLL
 ```
 SLL rd, rs1, rs2 -> rd = rs1 << rs2
 ```
 * note that in order to perform logical operation, the operand value should be cast to (uint 32).
 
-## SRA
+### SRA
 ```
 SRA rd, rs1, rs2 -> rd = rs1 >> rs2
 ```
 
-## SRL
+### SRL
 ```
 SRL rd, rs1, rs2 -> rd = rs1 >> rs2
 ```
 * note that in order to perform logical operation, the operand value should be cast to (uint 32).
+
+## U-type Instruction
+### LUI
+```
+LUI rd, imm -> rd = (int32_t)imm << 12
+```
+* note that imm is sign extended before shift left by 12 bits.
+
+### AUIPC
+```
+AUIPC rd, imm -> rd = pc + ((int32_t)imm << 12)
+```
+* note that imm is sign extended before shift left by 12 bits.
