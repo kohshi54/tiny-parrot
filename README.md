@@ -37,6 +37,24 @@ ORI rd, rs1, imm -> rd = rs1 | imm
 XORI rd, rs1, imm -> rd = rs1 ^ imm
 ```
 
+## SLLI
+```
+SLL rd, rs1, rs2 -> rd = rs1 << rs2
+```
+* note that in order to perform logical operation, the operand value should be cast to (uint 32).
+
+## SRAI
+```
+SRA rd, rs1, rs2 -> rd = rs1 >> rs2
+```
+* perform arithmatic shift, which means sign extension is operated during the operatin.
+
+## SRLI
+```
+SRL rd, rs1, rs2 -> rd = rs1 >> rs2
+```
+* note that in order to perform logical operation, the operand value should be cast to (uint 32).
+
 ## R-type Instruction
 ### ADD
 ```
@@ -50,7 +68,7 @@ SUB rd, rs1, rs2 -> rd = rs1 - rs2
 ```
 AND rd, rs1, rs2 -> rd = rs1 & rs2
 ```
-* note that the AND and similar operation in RISC-V is bitwise operation. not logical.
+* note that the AND and similar operation in RISC-V is bitwise operation, not logical.
 ### OR
 ```
 OR rd, rs1, rs2 -> rd = rs1 | rs2
@@ -60,3 +78,19 @@ OR rd, rs1, rs2 -> rd = rs1 | rs2
 XOR rd, rs1, rs2 -> rd = rs1 ^ rs2
 ```
 
+## SLL
+```
+SLL rd, rs1, rs2 -> rd = rs1 << rs2
+```
+* note that in order to perform logical operation, the operand value should be cast to (uint 32).
+
+## SRA
+```
+SRA rd, rs1, rs2 -> rd = rs1 >> rs2
+```
+
+## SRL
+```
+SRL rd, rs1, rs2 -> rd = rs1 >> rs2
+```
+* note that in order to perform logical operation, the operand value should be cast to (uint 32).
