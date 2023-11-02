@@ -148,6 +148,7 @@ BLT rs1, rs2, offset -> if (rs1 < rs2) pc += offset
 ```
 BGE rs1, rs2, offset -> if (rs1 >= rs2) pc += offset
 ```
+* not that bge include equality (bge stands for branch if greater or equal to).
 
 ### BLTU
 ```
@@ -156,5 +157,5 @@ BLTU rs1, rs2, offset -> if ((uint32_t)rs1 < (uint32_t)rs2) pc += offset
 
 ### BGEU
 ```
-BGE rs1, rs2, offset -> if ((uint32_t)rs1 >= (uint32_t)rs2) pc += offset
+BGEU rs1, rs2, offset -> if ((uint32_t)rs1 >= (uint32_t)rs2) pc += offset
 ```
