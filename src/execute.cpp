@@ -22,6 +22,12 @@ bool execute_i_type(std::string imm, std::string rs1, std::string rd, std::strin
         regs.write(rd, regs.read(rs1) < stoi(imm));
     else if (!opcode.compare("sltiu"))
         regs.write(rd, (uint32_t)regs.read(rs1) < (uint32_t)stoi(imm));
+    else if (!opcode.compare("jalr"))
+    {
+        regs.pc = regs.read(rs1) + stoi(imm) - 4; // -4 then it will be added after in main loop.
+        regs.write(rd, regs.pc + 4);
+        std::cout << "rd: " << regs.read(rd) << std::endl;
+    }
     return true;
 }
 
@@ -92,6 +98,16 @@ bool execute_b_type(std::string offset, std::string rs2, std::string rs1, std::s
     {
         if ((uint32_t)regs.read(rs1) >= (uint32_t)regs.read(rs2))
             regs.pc += (stoi(offset) - 4); // -4 then it will be added after in main loop.
+    }
+    return true;
+}
+
+bool execute_j_type(std::string offset, std::string rd, std::string opcode)
+{
+    if (!opcode.compare("jal"))
+    {
+        regs.write(rd, regs.pc + 4);
+        regs.pc += stoi(offset) - 4; // -4 then it will be added after in main loop.
     }
     return true;
 }

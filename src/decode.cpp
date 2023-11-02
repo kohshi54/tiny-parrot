@@ -80,6 +80,25 @@ bool decode_b_type(std::string &opcode, std::stringstream &operands)
     return true;
 }
 
+bool decode_j_type(std::string &opcode, std::stringstream &operands)
+{
+    std::string rd, offset;
+    std::string *reg[] = {&rd, &offset};
+    for (int i = 0; i < 2; ++i)
+    {
+        getline(operands, *reg[i], ',');
+        if (operands.eof() && i != 1)
+        {
+            std::cout << "invalid oprand in jal" << std::endl;
+            return false;
+        }
+        reg[i]->erase(std::remove(reg[i]->begin(), reg[i]->end(), ' '), reg[i]->end());
+    }
+    execute_j_type(offset, rd, opcode);
+    std::cout << "rd: " << regs.read(rd) << std::endl;
+    return true;
+}
+
 bool decode(std::string instr)
 {
     std::cout << instr << std::endl;
@@ -96,8 +115,12 @@ bool decode(std::string instr)
             break ;
         case instr_type::U_type:
             decode_u_type(opcode, operands);
+            break ;
         case instr_type::B_type:
             decode_b_type(opcode, operands);
+            break ;
+        case instr_type::J_type:
+            decode_j_type(opcode, operands);
             break ;
         default:
             break ;
