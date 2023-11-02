@@ -17,3 +17,7 @@ sra t4, t6, a1
 srl t3, t6, a1
 lui a7, 1
 auipc t0, 1
+slt s5, t2, t1
+sltu s4, t1, t2
+slti s7, t2, -1
+sltiu s8, t1, -1

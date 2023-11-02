@@ -18,6 +18,10 @@ bool execute_i_type(std::string imm, std::string rs1, std::string rd, std::strin
         regs.write(rd, regs.read(rs1) >> stoi(imm));
     else if (!opcode.compare("srli")) // cast rs1 to (uint 32) from (int 32) in order to make shift logical and not cause sign extension.
         regs.write(rd, (uint32_t)regs.read(rs1) >> stoi(imm));
+    else if (!opcode.compare("slti"))
+        regs.write(rd, regs.read(rs1) < stoi(imm));
+    else if (!opcode.compare("sltiu"))
+        regs.write(rd, (uint32_t)regs.read(rs1) < (uint32_t)stoi(imm));
     return true;
 }
 
@@ -39,6 +43,10 @@ bool execute_r_type(std::string rs2, std::string rs1, std::string rd, std::strin
         regs.write(rd, regs.read(rs1) >> regs.read(rs2));
     else if (!opcode.compare("srl")) // cast rs1 to (uint 32) from (int 32) in order to make shift logical and not cause sign extension.
         regs.write(rd, (uint32_t)regs.read(rs1) >> regs.read(rs2));
+    else if (!opcode.compare("slt"))
+        regs.write(rd, regs.read(rs1) < regs.read(rs2));
+    else if (!opcode.compare("sltu"))
+        regs.write(rd, (uint32_t)regs.read(rs1) < (uint32_t)regs.read(rs2));
     return true;
 }
 

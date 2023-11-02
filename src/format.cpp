@@ -2,7 +2,7 @@
 
 bool is_i_type(std::string opcode)
 {
-    static const std::unordered_set<std::string> i_types = {"addi", "slti", 
+    static const std::unordered_set<std::string> i_types = {"addi", "slti", "sltiu",
                                                             "andi", "ori", "xori", 
                                                             "slli", "srli", "srai"};
     return i_types.count(opcode) > 0;
