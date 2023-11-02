@@ -55,6 +55,16 @@ SRL rd, rs1, rs2 -> rd = rs1 >> rs2
 ```
 * note that in order to perform logical operation, the operand value should be cast to (uint 32).
 
+### SLTI
+```
+SLTI rd, rs1, rs2 -> rd = rs1 < imm
+```
+
+### SLTIU
+```
+SLTIU rd, rs1, rs2 -> rd = (uint32_t)rs1 < (uint32_t)imm
+```
+
 ## R-type Instruction
 ### ADD
 ```
@@ -94,6 +104,16 @@ SRA rd, rs1, rs2 -> rd = rs1 >> rs2
 SRL rd, rs1, rs2 -> rd = rs1 >> rs2
 ```
 * note that in order to perform logical operation, the operand value should be cast to (uint 32).
+
+### SLT
+```
+SLT rd, rs1, rs2 -> rd = rs1 < rs2
+```
+
+### SLTU
+```
+SLTU rd, rs1, rs2 -> rd = (uint32_t)rs1 < (uint32_t)rs2
+```
 
 ## U-type Instruction
 ### LUI
