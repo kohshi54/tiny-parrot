@@ -65,6 +65,12 @@ SLTI rd, rs1, rs2 -> rd = rs1 < imm
 SLTIU rd, rs1, rs2 -> rd = (uint32_t)rs1 < (uint32_t)imm
 ```
 
+### JALR
+```
+JALR rd, rs1, offset -> pc = rs1 + offset; rd = pc + 4
+```
+* note that JAL is J-type instruction, and JALR is I-type instruction.
+
 ## R-type Instruction
 ### ADD
 ```
@@ -159,4 +165,10 @@ BLTU rs1, rs2, offset -> if ((uint32_t)rs1 < (uint32_t)rs2) pc += offset
 ### BGEU
 ```
 BGEU rs1, rs2, offset -> if ((uint32_t)rs1 >= (uint32_t)rs2) pc += offset
+```
+
+## J-type Instruction
+### JAL
+```
+JAL rd, offset -> pc += offset; rd = pc + 4
 ```
