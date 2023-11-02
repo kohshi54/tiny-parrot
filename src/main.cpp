@@ -1,6 +1,7 @@
 #include "tiny-parrot.hpp"
 
 Register regs;
+InstrMemory instrmem;
 
 int main(int argc, char *argv[])
 {
@@ -13,9 +14,10 @@ int main(int argc, char *argv[])
 
     std::ifstream file(argv[1]);
     std::string instr;
-    while (std::getline(file, instr))
+    instrmem.load_program(file);
+    while (regs.pc < instrmem.instr_memory.size())
     {
-        if (!decode(instr)) // modify this to read instr from instr memory based on pc.
+        if (!decode(instrmem.instr_memory[regs.pc]))
         {
             std::cout << "exception occurred, abort." << std::endl;
             return (1);

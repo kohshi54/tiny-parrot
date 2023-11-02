@@ -7,6 +7,7 @@
 # include <sstream>
 # include <algorithm>
 # include "register.hpp"
+# include "memory.hpp"
 
 # include <unordered_set>
 enum class instr_type

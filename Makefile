@@ -6,7 +6,7 @@ DEPFLAGS = -MMD -MP -MF $(DEP_DIR)$*.d
 SRC_DIR		= src/
 OBJ_DIR		= obj/
 DEP_DIR		= dep/
-SRCS = main.cpp register.cpp decode.cpp format.cpp execute.cpp
+SRCS = main.cpp register.cpp decode.cpp format.cpp execute.cpp memory.cpp
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:%.cpp=%.o))
 DEPS = $(addprefix $(DEP_DIR), $(SRCS:%.cpp=%.d))
 
