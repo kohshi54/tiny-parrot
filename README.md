@@ -133,6 +133,7 @@ AUIPC rd, imm -> rd = pc + ((int32_t)imm << 12)
 ```
 BEQ rs1, rs2, offset -> if (rs1 == rs2) pc += offset
 ```
+* note that offset is 12 bits length, which means the offset range is within ±4 KiB.
 
 ### BNE
 ```
