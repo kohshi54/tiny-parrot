@@ -127,3 +127,34 @@ LUI rd, imm -> rd = (int32_t)imm << 12
 AUIPC rd, imm -> rd = pc + ((int32_t)imm << 12)
 ```
 * note that imm is sign extended before shift left by 12 bits.
+
+## B-type Instruction
+### BEQ
+```
+BEQ rs1, rs2, offset -> if (rs1 == rs2) pc += offset
+```
+
+### BNE
+```
+BNE rs1, rs2, offset -> if (rs1 != rs2) pc += offset
+```
+
+### BLT
+```
+BLT rs1, rs2, offset -> if (rs1 < rs2) pc += offset
+```
+
+### BGE
+```
+BGE rs1, rs2, offset -> if (rs1 >= rs2) pc += offset
+```
+
+### BLTU
+```
+BLTU rs1, rs2, offset -> if ((uint32_t)rs1 < (uint32_t)rs2) pc += offset
+```
+
+### BGEU
+```
+BGE rs1, rs2, offset -> if ((uint32_t)rs1 >= (uint32_t)rs2) pc += offset
+```
