@@ -31,5 +31,6 @@ bool decode(std::string instr);
 bool execute_i_type(std::string imm, std::string rs1, std::string rd, std::string opcode);
 bool execute_r_type(std::string rs2, std::string rs1, std::string rd, std::string opcode);
 bool execute_u_type(std::string imm, std::string rd, std::string opcode);
+bool execute_b_type(std::string offset, std::string rs2, std::string rs1, std::string opcode);
 
 #endif

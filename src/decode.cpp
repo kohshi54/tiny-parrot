@@ -62,6 +62,24 @@ bool decode_u_type(std::string &opcode, std::stringstream &operands)
     return true;
 }
 
+bool decode_b_type(std::string &opcode, std::stringstream &operands)
+{
+    std::string rs1, rs2, offset;
+    std::string *reg[] = {&rs1, &rs2, &offset};
+    for (int i = 0; i < 3; ++i)
+    {
+        getline(operands, *reg[i], ',');
+        if (operands.eof() && i != 2)
+        {
+            std::cout << "invalid oprand in beq" << std::endl;
+            return false;
+        }
+        reg[i]->erase(std::remove(reg[i]->begin(), reg[i]->end(), ' '), reg[i]->end());
+    }
+    execute_b_type(offset, rs2, rs1, opcode);
+    return true;
+}
+
 bool decode(std::string instr)
 {
     std::cout << instr << std::endl;
@@ -78,6 +96,8 @@ bool decode(std::string instr)
             break ;
         case instr_type::U_type:
             decode_u_type(opcode, operands);
+        case instr_type::B_type:
+            decode_b_type(opcode, operands);
             break ;
         default:
             break ;

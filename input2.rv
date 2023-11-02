@@ -1,0 +1,7 @@
+addi t0, t0, 2
+addi t1, t1, 2
+beq t0, t1, 8
+addi a0, a0, 5
+addi t1, t1, -1
+bne t0, t1, 4
+addi a3, a3, 5
