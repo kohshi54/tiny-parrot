@@ -25,8 +25,7 @@ bool execute_i_type(std::string imm, std::string rs1, std::string rd, std::strin
     else if (!opcode.compare("jalr"))
     {
         regs.pc = regs.read(rs1) + stoi(imm) - 4; // -4 then it will be added after in main loop.
-        regs.write(rd, regs.pc + 4);
-        std::cout << "rd: " << regs.read(rd) << std::endl;
+        regs.write(rd, regs.pc + 4);  // if rd is not specified, pc + 4 is restored in x1.
     }
     return true;
 }
@@ -106,7 +105,7 @@ bool execute_j_type(std::string offset, std::string rd, std::string opcode)
 {
     if (!opcode.compare("jal"))
     {
-        regs.write(rd, regs.pc + 4);
+        regs.write(rd, regs.pc + 4); // if rd is not specified, pc + 4 is restored in x1.
         regs.pc += stoi(offset) - 4; // -4 then it will be added after in main loop.
     }
     return true;
