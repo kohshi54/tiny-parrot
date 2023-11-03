@@ -24,6 +24,7 @@ https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf#page=116
 ```
 ADDI rd, rs1, imm -> rd = rs1 + imm
 ```
+* equivalent to mv instruction when used with addi rd, rs1, 0. RISC-V does not have mv instruction, so that assembler change mv to addi.
 ### ANDI
 ```
 ANDI rd, rs1, imm -> rd = rs1 & imm
@@ -36,35 +37,29 @@ ORI rd, rs1, imm -> rd = rs1 | imm
 ```
 XORI rd, rs1, imm -> rd = rs1 ^ imm
 ```
-
 ### SLLI
 ```
 SLL rd, rs1, rs2 -> rd = rs1 << rs2
 ```
 * note that in order to perform logical operation, the operand value should be cast to (uint 32).
-
 ### SRAI
 ```
 SRA rd, rs1, rs2 -> rd = rs1 >> rs2
 ```
 * perform arithmatic shift, which means sign extension is operated during the operatin.
-
 ### SRLI
 ```
 SRL rd, rs1, rs2 -> rd = rs1 >> rs2
 ```
 * note that in order to perform logical operation, the operand value should be cast to (uint 32).
-
 ### SLTI
 ```
 SLTI rd, rs1, rs2 -> rd = rs1 < imm
 ```
-
 ### SLTIU
 ```
 SLTIU rd, rs1, rs2 -> rd = (uint32_t)rs1 < (uint32_t)imm
 ```
-
 ### JALR
 ```
 JALR rd, rs1, offset -> pc = rs1 + offset; rd = pc + 4
@@ -93,29 +88,24 @@ OR rd, rs1, rs2 -> rd = rs1 | rs2
 ```
 XOR rd, rs1, rs2 -> rd = rs1 ^ rs2
 ```
-
 ### SLL
 ```
 SLL rd, rs1, rs2 -> rd = rs1 << rs2
 ```
 * note that in order to perform logical operation, the operand value should be cast to (uint 32).
-
 ### SRA
 ```
 SRA rd, rs1, rs2 -> rd = rs1 >> rs2
 ```
-
 ### SRL
 ```
 SRL rd, rs1, rs2 -> rd = rs1 >> rs2
 ```
 * note that in order to perform logical operation, the operand value should be cast to (uint 32).
-
 ### SLT
 ```
 SLT rd, rs1, rs2 -> rd = rs1 < rs2
 ```
-
 ### SLTU
 ```
 SLTU rd, rs1, rs2 -> rd = (uint32_t)rs1 < (uint32_t)rs2
@@ -127,7 +117,6 @@ SLTU rd, rs1, rs2 -> rd = (uint32_t)rs1 < (uint32_t)rs2
 LUI rd, imm -> rd = (int32_t)imm << 12
 ```
 * note that imm is sign extended before shift left by 12 bits.
-
 ### AUIPC
 ```
 AUIPC rd, imm -> rd = pc + ((int32_t)imm << 12)
@@ -140,28 +129,23 @@ AUIPC rd, imm -> rd = pc + ((int32_t)imm << 12)
 BEQ rs1, rs2, offset -> if (rs1 == rs2) pc += offset
 ```
 * note that offset is 12 bits length, which means the offset range is within ±4 KiB.
-
 ### BNE
 ```
 BNE rs1, rs2, offset -> if (rs1 != rs2) pc += offset
 ```
-
 ### BLT
 ```
 BLT rs1, rs2, offset -> if (rs1 < rs2) pc += offset
 ```
-
 ### BGE
 ```
 BGE rs1, rs2, offset -> if (rs1 >= rs2) pc += offset
 ```
 * not that bge include equality (bge stands for branch if greater or equal to).
-
 ### BLTU
 ```
 BLTU rs1, rs2, offset -> if ((uint32_t)rs1 < (uint32_t)rs2) pc += offset
 ```
-
 ### BGEU
 ```
 BGEU rs1, rs2, offset -> if ((uint32_t)rs1 >= (uint32_t)rs2) pc += offset
