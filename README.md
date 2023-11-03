@@ -24,7 +24,7 @@ https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf#page=116
 ```
 ADDI rd, rs1, imm -> rd = rs1 + imm
 ```
-* equivalent to mv instruction when used with addi rd, rs1, 0. RISC-V does not have mv instruction, so that assembler change mv to addi.
+* equivalent to mv instruction when used with addi rd, rs1, 0. RISC-V does not have mv instruction, so that assembler changes mv to addi.
 ### ANDI
 ```
 ANDI rd, rs1, imm -> rd = rs1 & imm
