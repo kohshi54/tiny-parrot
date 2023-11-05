@@ -183,14 +183,14 @@ JAL rd, offset -> pc += offset; rd = pc + 4
 ## S-type Instruction
 ### SW
 ```
-SW rs1, rs2, offset -> mem[rs1 + offset] = rs2
+SW rs1, rs2, offset -> mem[rs2 + offset] = rs1 (*original: mem[rs1 + offset] = rs2)
 ```
 ### SH
 ```
-SH rs1, rs2, offset -> mem[rs1 + offset] = rs2 & 0x0000ffff
+SH rs1, rs2, offset -> mem[rs2 + offset] = rs1 & 0x0000ffff (*original: mem[rs1 + offset] = rs2 & 0x0000ffff)
 ```
 * note that 0x0000ffff = half word which is 16 bits. one word is 4 bytes. in hex format 1 bit stand for 4 bits in binary, so 2 digits of hex is 1 byte. threfore in order to achive 32 bit, it needs 2 * 4 = 8 digits in hex.
 ### SB
 ```
-SB rs1, rs2, offset -> mem[rs1 + offset] = rs2 & 0x0000000ff
+SB rs1, rs2, offset -> mem[rs2 + offset] = rs1 & 0x0000000ff (*original: SB rs1, rs2, offset -> mem[rs1 + offset] = rs2 & 0x0000000ff)
 ```
