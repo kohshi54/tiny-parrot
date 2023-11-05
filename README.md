@@ -42,22 +42,22 @@ XORI rd, rs1, imm -> rd = rs1 ^ imm
 ```
 ### SLLI
 ```
-SLL rd, rs1, rs2 -> rd = rs1 << rs2
+SLL rd, rs1, imm -> rd = rs1 << imm
 ```
 * note that in order to perform logical operation, the operand value should be cast to (uint 32).
 ### SRAI
 ```
-SRA rd, rs1, rs2 -> rd = rs1 >> rs2
+SRA rd, rs1, imm -> rd = rs1 >> imm
 ```
 * perform arithmatic shift, which means sign extension is operated during the operatin.
 ### SRLI
 ```
-SRL rd, rs1, rs2 -> rd = rs1 >> rs2
+SRL rd, rs1, imm -> rd = rs1 >> imm
 ```
 * note that in order to perform logical operation, the operand value should be cast to (uint 32).
 ### SLTI
 ```
-SLTI rd, rs1, rs2 -> rd = rs1 < imm
+SLTI rd, rs1, imm -> rd = rs1 << imm
 ```
 ### SLTIU
 ```
@@ -68,6 +68,26 @@ SLTIU rd, rs1, rs2 -> rd = (uint32_t)rs1 < (uint32_t)imm
 JALR rd, rs1, offset -> pc = rs1 + offset; rd = pc + 4
 ```
 * note that JAL is J-type instruction, and JALR is I-type instruction.
+### LW
+```
+LW rd, rs1, offset -> rd = mem[rs1 + offset]
+```
+### LH
+```
+LH rd, rs1, offset -> rd = mem[rs1 + offset] & 0x0000ffff
+```
+### LB
+```
+LB rd, rs1, offset -> rd = mem[rs1 + offset] & 0x000000ff
+```
+### LHU
+```
+LHU rd, rs1, offset -> rd = (uint32_t)mem[rs1 + offset] & 0x0000ffff
+```
+### LBU
+```
+LBU rd, rs1, offset -> rd = (uint32_t)mem[rs1 + offset] & 0x000000ff
+```
 
 ## R-type Instruction
 ### ADD
@@ -158,4 +178,18 @@ BGEU rs1, rs2, offset -> if ((uint32_t)rs1 >= (uint32_t)rs2) pc += offset
 ### JAL
 ```
 JAL rd, offset -> pc += offset; rd = pc + 4
+```
+
+## S-type Instruction
+### SW
+```
+SW rs1, rs2, offset -> mem[rs1 + offset] = rs2
+```
+### SH
+```
+SH rs1, rs2, offset -> mem[rs1 + offset] = rs2 & 0x0000ffff
+```
+### SB
+```
+SB rs1, rs2, offset -> mem[rs1 + offset] = rs2 & 0x0000000ff
 ```
