@@ -25,7 +25,7 @@ bool execute_i_type(std::string imm, std::string rs1, std::string rd, std::strin
         regs.write(rd, (uint32_t)regs.read(rs1) < (uint32_t)stoi(imm));
     else if (!opcode.compare("jalr"))
     {
-        regs.pc = regs.read(rs1) + stoi(imm) - 4; // -4 then it will be added after in main loop.
+        regs.pc = regs.read(rs1) + (stoi(imm) * 4) - 4; // -4 then it will be added after in main loop.
         regs.write(rd, regs.pc + 4);  // if rd is not specified, pc + 4 is restored in x1.
     }
     else if (!opcode.compare("lw"))
@@ -80,34 +80,34 @@ bool execute_b_type(std::string offset, std::string rs2, std::string rs1, std::s
     if (!opcode.compare("beq"))
     {
         if (regs.read(rs1) == regs.read(rs2))
-            regs.pc += (stoi(offset) - 4); // -4 then it will be added after in main
+            regs.pc += (stoi(offset) * 4) - 4; // -4 then it will be added after in main
         // regs.pc = regs.read(rs1) == regs.read(rs2) ? regs.pc += offset : regs.pc;
     }
     else if (!opcode.compare("bne"))
     {
         if (regs.read(rs1) != regs.read(rs2))
-            regs.pc += (stoi(offset) - 4); // -4 then it will be added after in main loop.
+            regs.pc += (stoi(offset) * 4) - 4; // -4 then it will be added after in main loop.
         // regs.pc = regs.read(rs1) != regs.read(rs2) ? regs.pc += offset : regs.pc;
     }
     else if (!opcode.compare("blt"))
     {
         if (regs.read(rs1) < regs.read(rs2))
-            regs.pc += (stoi(offset) - 4); // -4 then it will be added after in main loop.
+            regs.pc += (stoi(offset) * 4) - 4; // -4 then it will be added after in main loop.
     }
     else if (!opcode.compare("bge"))
     {
         if (regs.read(rs1) >= regs.read(rs2))
-            regs.pc += (stoi(offset) - 4); // -4 then it will be added after in main loop.
+            regs.pc += (stoi(offset) * 4) - 4; // -4 then it will be added after in main loop.
     }
     else if (!opcode.compare("bltu"))
     {
         if ((uint32_t)regs.read(rs1) < (uint32_t)regs.read(rs2))
-            regs.pc += (stoi(offset) - 4); // -4 then it will be added after in main loop.
+            regs.pc += (stoi(offset) * 4) - 4; // -4 then it will be added after in main loop.
     }
     else if (!opcode.compare("bgeu"))
     {
         if ((uint32_t)regs.read(rs1) >= (uint32_t)regs.read(rs2))
-            regs.pc += (stoi(offset) - 4); // -4 then it will be added after in main loop.
+            regs.pc += (stoi(offset) * 4) - 4; // -4 then it will be added after in main loop.
     }
     return true;
 }
@@ -117,7 +117,7 @@ bool execute_j_type(std::string offset, std::string rd, std::string opcode)
     if (!opcode.compare("jal"))
     {
         regs.write(rd, regs.pc + 4); // if rd is not specified, pc + 4 is restored in x1.
-        regs.pc += stoi(offset) - 4; // -4 then it will be added after in main loop.
+        regs.pc += (stoi(offset) * 4) - 4; // -4 then it will be added after in main loop.
     }
     return true;
 }
@@ -125,10 +125,23 @@ bool execute_j_type(std::string offset, std::string rd, std::string opcode)
 bool execute_s_type(std::string offset, std::string rs2, std::string rs1, std::string opcode)
 {
     if (!opcode.compare("sw"))
-        datamem.write_memory(regs.read(rs2), regs.read(rs1) + (int32_t)stoi(offset));
+    {
+        // sw, rs1, rs2, offset -> mem[rs2 + offset] = rs1
+        std::cout << "rs1:" << regs.read(rs1) << std::endl;
+        std::cout << "rs2:" << regs.read(rs2) << std::endl;
+        std::cout << "offset:" << stoi(offset) << std::endl;
+        std::cout << regs.read(rs1) + (int32_t)stoi(offset) << std::endl;
+        datamem.write_memory(regs.read(rs1), regs.read(rs2) + (int32_t)stoi(offset));
+    }
     else if (!opcode.compare("sh"))
-        datamem.write_memory(regs.read(rs2) & 0x0000ffff, regs.read(rs1) + (int32_t)stoi(offset));
+    {
+        // sh, rs1, rs2, offset -> mem[rs2 + offset] = rs1
+        datamem.write_memory(regs.read(rs1) & 0x0000ffff, regs.read(rs2) + (int32_t)stoi(offset));
+    }
     else if (!opcode.compare("sb"))
-        datamem.write_memory(regs.read(rs2) & 0x000000ff, regs.read(rs1) + (int32_t)stoi(offset));
+    {
+        // sb, rs1, rs2, offset -> mem[rs2 + offset] = rs1
+        datamem.write_memory(regs.read(rs1) & 0x000000ff, regs.read(rs2) + (int32_t)stoi(offset));
+    }
     return true;
 }
