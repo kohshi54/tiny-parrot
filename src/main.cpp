@@ -31,6 +31,6 @@ int main(int argc, char *argv[])
         count++;
     }
     regs.dump_registers();
-    std::cout << datamem.read_memory(60,0) << std::endl;
+    std::cout << "sum = " << datamem.read_memory(1,40) << std::endl;
     std::cout << "num of instrs: " << count << std::endl;
 }
