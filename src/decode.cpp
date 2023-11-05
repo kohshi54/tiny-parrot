@@ -144,6 +144,8 @@ bool decode(std::string instr)
             decode_s_type(opcode, operands);
             break ;
         default:
+            std::cout << "No such instruction: " << opcode << std::endl;
+            exit(1);
             break ;
     }
 
