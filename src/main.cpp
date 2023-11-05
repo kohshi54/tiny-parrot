@@ -12,22 +12,25 @@ int main(int argc, char *argv[])
         return (1);
     }
     std::cout << "hello from RV32I!" << std::endl;
-
+    // set sp
+    regs.write("sp", 60);
     std::ifstream file(argv[1]);
     instrmem.load_program(file);
+    size_t count = 0;
     while (regs.pc / 4 < instrmem.instr_memory.size())
     {
+        std::cout << "pc=" << regs.pc / 4 + 1 << " : ";
         if (!decode(instrmem.instr_memory[regs.pc / 4]))
         {
             std::cout << "exception occurred, abort." << std::endl;
             return (1);
         }
-
-        std::cout << regs.read("a5") << "<<<<<<<<<<<<" << std::endl;
-        std::cout << regs.read("a4") << "<<<<<<<<<<<<" << std::endl;
+        regs.dump_registers();
         std::cout << "--------------" << std::endl;
         regs.pc += 4; // modify this to 4 byte alligned later. -> done.
+        count++;
     }
     regs.dump_registers();
-    std::cout << regs.pc << std::endl;
+    std::cout << datamem.read_memory(60,0) << std::endl;
+    std::cout << "num of instrs: " << count << std::endl;
 }
