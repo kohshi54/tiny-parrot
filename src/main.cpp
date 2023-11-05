@@ -2,6 +2,7 @@
 
 Register regs;
 InstrMemory instrmem;
+DataMemory datamem;
 
 int main(int argc, char *argv[])
 {

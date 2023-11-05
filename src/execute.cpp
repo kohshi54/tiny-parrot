@@ -1,6 +1,7 @@
 #include "tiny-parrot.hpp"
 
 extern Register regs;
+extern DataMemory datamem;
 
 bool execute_i_type(std::string imm, std::string rs1, std::string rd, std::string opcode)
 {
@@ -27,6 +28,16 @@ bool execute_i_type(std::string imm, std::string rs1, std::string rd, std::strin
         regs.pc = regs.read(rs1) + stoi(imm) - 4; // -4 then it will be added after in main loop.
         regs.write(rd, regs.pc + 4);  // if rd is not specified, pc + 4 is restored in x1.
     }
+    else if (!opcode.compare("lw"))
+        regs.write(rd, datamem.read_memory(4, regs.read(rs1) + (int32_t)stoi(imm)));
+    else if (!opcode.compare("lh"))
+        regs.write(rd, datamem.read_memory(2, regs.read(rs1) + (int32_t)stoi(imm)));
+    else if (!opcode.compare("lb"))
+        regs.write(rd, datamem.read_memory(1, regs.read(rs1) + (int32_t)stoi(imm)));
+    else if (!opcode.compare("lhu"))
+        regs.write(rd, (uint32_t)datamem.read_memory(2, regs.read(rs1) + (int32_t)stoi(imm)));
+    else if (!opcode.compare("lbu"))
+        regs.write(rd, (uint32_t)datamem.read_memory(1, regs.read(rs1) + (int32_t)stoi(imm)));
     return true;
 }
 
@@ -108,5 +119,16 @@ bool execute_j_type(std::string offset, std::string rd, std::string opcode)
         regs.write(rd, regs.pc + 4); // if rd is not specified, pc + 4 is restored in x1.
         regs.pc += stoi(offset) - 4; // -4 then it will be added after in main loop.
     }
+    return true;
+}
+
+bool execute_s_type(std::string offset, std::string rs2, std::string rs1, std::string opcode)
+{
+    if (!opcode.compare("sw"))
+        datamem.write_memory(regs.read(rs2), regs.read(rs1) + (int32_t)stoi(offset));
+    else if (!opcode.compare("sh"))
+        datamem.write_memory(regs.read(rs2) & 0x0000ffff, regs.read(rs1) + (int32_t)stoi(offset));
+    else if (!opcode.compare("sb"))
+        datamem.write_memory(regs.read(rs2) & 0x000000ff, regs.read(rs1) + (int32_t)stoi(offset));
     return true;
 }

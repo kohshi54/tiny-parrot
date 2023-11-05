@@ -99,6 +99,24 @@ bool decode_j_type(std::string &opcode, std::stringstream &operands)
     return true;
 }
 
+bool decode_s_type(std::string &opcode, std::stringstream &operands)
+{
+    std::string rs1, rs2, offset;
+    std::string *reg[] = {&rs1, &rs2, &offset};
+    for (int i = 0; i < 3; ++i)
+    {
+        getline(operands, *reg[i], ',');
+        if (operands.eof() && i != 2)
+        {
+            std::cout << "invalid oprand in sw" << std::endl;
+            return false;
+        }
+        reg[i]->erase(std::remove(reg[i]->begin(), reg[i]->end(), ' '), reg[i]->end());
+    }
+    execute_s_type(offset, rs2, rs1, opcode);
+    return true;
+}
+
 bool decode(std::string instr)
 {
     std::cout << instr << std::endl;
@@ -121,6 +139,9 @@ bool decode(std::string instr)
             break ;
         case instr_type::J_type:
             decode_j_type(opcode, operands);
+            break ;
+        case instr_type::S_type:
+            decode_s_type(opcode, operands);
             break ;
         default:
             break ;

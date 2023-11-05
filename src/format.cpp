@@ -5,7 +5,9 @@ bool is_i_type(std::string opcode)
     static const std::unordered_set<std::string> i_types = {"addi", "slti", "sltiu",
                                                             "andi", "ori", "xori", 
                                                             "slli", "srli", "srai",
-                                                            "jalr"};
+                                                            "jalr", 
+                                                            "lw", "lh", "lb",
+                                                            "lhu", "lbu"};
     return i_types.count(opcode) > 0;
 }
 
@@ -38,6 +40,12 @@ bool is_j_type(std::string opcode)
     return j_types.count(opcode) > 0;
 }
 
+bool is_s_type(std::string opcode)
+{
+    static const std::unordered_set<std::string> s_types = {"sb", "sh", "sw"};
+    return s_types.count(opcode) > 0;
+}
+
 instr_type get_format(std::string opcode)
 {
     if (is_i_type(opcode))
@@ -50,5 +58,7 @@ instr_type get_format(std::string opcode)
         return instr_type::B_type;
     if (is_j_type(opcode))
         return instr_type::J_type;
+    if (is_s_type(opcode))
+        return instr_type::S_type;
     return instr_type::NOP;
 }
