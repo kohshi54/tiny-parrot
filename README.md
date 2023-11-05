@@ -19,8 +19,11 @@ https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf#page=116
 
 * note that instruction classifiction is based on not only opcode but also with funct7 and fucnt3.
 * also, RISC-V contains pseudo-instructions that is more complex instructions that will be translated into within RISC-V instruction sets by assembler.\
-https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf#page=122
-
+https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf#page=122 \
+  * For instance :
+    ```
+    mv a0,a5 -> add a0, a5, zero
+    ```
 
 ## I-type Instruction
 ### ADDI
