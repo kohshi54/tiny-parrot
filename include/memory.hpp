@@ -25,4 +25,11 @@ class DataMemory
         std::vector<char> data_memory; // 1GB of memory.
 };
 
+class MemoryMappedIO
+{
+    public:
+        const static int printaddr = 1000;
+        const static int readaddr = 1001;
+};
+
 #endif

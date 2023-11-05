@@ -3,3 +3,5 @@ sw t0, t2, 0
 lw t3, t0, 0
 lh a1, t0, 0
 lb a2, t0, 0
+sw t0, t2, 1000
+sw t0, t2, 1001

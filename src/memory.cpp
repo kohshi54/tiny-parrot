@@ -20,6 +20,17 @@ void DataMemory::write_memory(int32_t data, int addr) // write one word (4 bytes
         exit(1);
         // return ;
     }
+    if (addr == MemoryMappedIO::printaddr)
+    {
+        std::cout << "MMIO print triggered." << std::endl;
+        return ;
+    }
+    else if (addr == MemoryMappedIO::readaddr)
+    {
+        std::cout << "MMIO read triggered." << std::endl;
+        return ;
+    }
+
     data_memory[addr] = static_cast<char>(data & 0xFF); // Cast to char to store only the lower byte
     data_memory[addr + 1] = static_cast<char>((data >> 8) & 0xFF); // Shift by 8 bits to get the next byte
     data_memory[addr + 2] = static_cast<char>((data >> 16) & 0xFF); // Shift by 16 bits for the third byte
