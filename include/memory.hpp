@@ -21,7 +21,7 @@ class DataMemory
         int32_t read_memory(int bytes, int addr);
 
     private:
-        const size_t mem_size = 1024 * 1024 * 1024;
+        static const size_t mem_size = 1024 * 1024 * 1024;
         std::vector<char> data_memory; // 1GB of memory.
 };
 

@@ -55,7 +55,7 @@ int32_t DataMemory::read_memory(int bytes, int addr) // read num of bytes and re
     // return buffer[0] | buffer[1] << 8 | buffer[2] << 16 | buffer[3] << 24; // big endian.
     uint32_t word = 0;
     for (int i = 0; i < bytes; i++)
-        word |= data_memory[addr + i] << (8 * i);
+        word |= (unsigned char)data_memory[addr + i] << (8 * i); // Bug fixed!! (arithimatic shift was perfored here and overflow was occured. it should be logical shift here)data_memory[addr+i] was char so signed bit was estended even though it should be logical shift. To fix this casting to unsigned type befor shift so that the logical shift would be performed.
     return static_cast<int32_t>(word); // extend signed bit by casting to int32_t.
 }
 

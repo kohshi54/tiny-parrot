@@ -1,0 +1,2187 @@
+hello from RV32I!
+pc=1 : addi sp,sp,-32
+rd=:0
+rs1=:0
+imm=
+------------
+rd=sp:28
+rs1=sp:28
+imm=-32
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0   0  28   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=2 : sw s0,sp,28
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=s0:0
+rs2=sp:28
+offset=28
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0   0  28   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=3 : addi s0,sp,32
+rd=:0
+rs1=:0
+imm=
+------------
+rd=s0:60
+rs1=sp:28
+imm=32
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0   0  28   0   0   0   0   0  60   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=4 : sw zero,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=zero:0
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0   0  28   0   0   0   0   0  60   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=5 : jal ra,8
+rd=:0
+offset=
+------------
+rd=ra:20
+offset=8
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:0
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:0
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:0
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:0
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:0
+rs1=a4:0
+rs2=a5:0
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:0
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:0
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:1
+rs1=a5:1
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:1
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:1
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   1  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:1
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   1  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:0
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:1
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:1
+rs1=a4:0
+rs2=a5:1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 0
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:1
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 1
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:1
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 1
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:2
+rs1=a5:2
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 1
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:2
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 1
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:2
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   2   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 1
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   2  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 1
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:2
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   2  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 1
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:1
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   1  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 1
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:2
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   1   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 1
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:3
+rs1=a4:1
+rs2=a5:3
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   1   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 1
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:3
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   1   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 3
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:2
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   1   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 3
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:3
+rs1=a5:3
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   1   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 3
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:3
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   1   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 3
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:3
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   3   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 3
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   3  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 3
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:3
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   3  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 3
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:3
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   3  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 3
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:3
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   3   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 3
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:6
+rs1=a4:3
+rs2=a5:6
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   3   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 3
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:6
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   3   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 6
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:3
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   3   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 6
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:4
+rs1=a5:4
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   3   4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 6
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:4
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   3   4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 6
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:4
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   4   4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 6
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   4  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 6
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:4
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   4  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 6
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:6
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   6  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 6
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:4
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   6   4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 6
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:10
+rs1=a4:6
+rs2=a5:10
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   6  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 6
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:10
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   6  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 10
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:4
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   6   4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 10
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:5
+rs1=a5:5
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   6   5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 10
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:5
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   6   5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 10
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:5
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   5   5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 10
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   5  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 10
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:5
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   5  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 10
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:10
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  10  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 10
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:5
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  10   5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 10
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:15
+rs1=a4:10
+rs2=a5:15
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  10  15   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 10
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:15
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  10  15   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 15
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:5
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  10   5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 15
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:6
+rs1=a5:6
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  10   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 15
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:6
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  10   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 15
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:6
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   6   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 15
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   6  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 15
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:6
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   6  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 15
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:15
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  15  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 15
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:6
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  15   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 15
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:21
+rs1=a4:15
+rs2=a5:21
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  15  21   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 15
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:21
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  15  21   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 21
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:6
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  15   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 21
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:7
+rs1=a5:7
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  15   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 21
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:7
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  15   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 21
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:7
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   7   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 21
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   7  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 21
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:7
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   7  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 21
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:21
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  21  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 21
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:7
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  21   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 21
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:28
+rs1=a4:21
+rs2=a5:28
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  21  28   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 21
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:28
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  21  28   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 28
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:7
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  21   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 28
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:8
+rs1=a5:8
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  21   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 28
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:8
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  21   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 28
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:8
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   8   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 28
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   8  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 28
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:8
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   8  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 28
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:28
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  28  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 28
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:8
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  28   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 28
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:36
+rs1=a4:28
+rs2=a5:36
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  28  36   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 28
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:36
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  28  36   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 36
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:8
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  28   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 36
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:9
+rs1=a5:9
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  28   9   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 36
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:9
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  28   9   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 36
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:9
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   9   9   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 36
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   9  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 36
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:9
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0   9  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 36
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:36
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  36  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 36
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:9
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  36   9   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 36
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:45
+rs1=a4:36
+rs2=a5:45
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  36  45   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 36
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:45
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  36  45   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 45
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:9
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  36   9   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 45
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:10
+rs1=a5:10
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  36  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 45
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:10
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  36  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 45
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:10
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  10  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 45
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  10  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 45
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:10
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  10  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 45
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:45
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  45  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 45
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:10
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  45  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 45
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:55
+rs1=a4:45
+rs2=a5:55
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  45  55   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 45
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:55
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  45  55   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 55
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:10
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  45  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 55
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:11
+rs1=a5:11
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  45  11   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 55
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:11
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  45  11   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 55
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:11
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  11  11   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 55
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  11  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 55
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:11
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  11  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 55
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:55
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  55  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 55
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:11
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  55  11   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 55
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:66
+rs1=a4:55
+rs2=a5:66
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  55  66   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 55
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:66
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  55  66   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 66
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:11
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  55  11   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 66
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:12
+rs1=a5:12
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  55  12   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 66
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:12
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  55  12   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 66
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:12
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  12  12   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 66
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  12  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 66
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:12
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  12  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 66
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:66
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  66  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 66
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:12
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  66  12   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 66
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:78
+rs1=a4:66
+rs2=a5:78
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  66  78   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 66
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:78
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  66  78   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 78
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:12
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  66  12   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 78
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:13
+rs1=a5:13
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  66  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 78
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:13
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  66  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 78
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:13
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  13  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 78
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  13  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 78
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:13
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  13  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 78
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:78
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  78  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 78
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:13
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  78  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 78
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:91
+rs1=a4:78
+rs2=a5:91
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  78  91   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 78
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:91
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  78  91   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 91
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:13
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  78  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 91
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:14
+rs1=a5:14
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  78  14   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 91
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:14
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  78  14   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 91
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:14
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  14  14   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 91
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  14  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 91
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:14
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  14  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 91
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:91
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  91  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 91
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:14
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  91  14   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 91
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:105
+rs1=a4:91
+rs2=a5:105
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  91 105   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 91
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:105
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  91 105   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 105
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:14
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  91  14   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 105
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:15
+rs1=a5:15
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  91  15   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 105
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:15
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  91  15   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 105
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:15
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  15  15   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 105
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  15  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 105
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:15
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  15  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 105
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:105
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 105  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 105
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:15
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 105  15   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 105
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:120
+rs1=a4:105
+rs2=a5:120
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 105 120   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 105
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:120
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 105 120   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 120
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:15
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 105  15   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 120
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:16
+rs1=a5:16
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 105  16   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 120
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:16
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 105  16   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 120
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:16
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  16  16   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 120
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  16  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 120
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:16
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  16  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 120
+=========================
+pc=6 : lw a4,s0,-20
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:120
+rs1=s0:60
+imm=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 120  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 120
+=========================
+pc=7 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:16
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 120  16   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 120
+=========================
+pc=8 : add a5,a4,a5
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a5:136
+rs1=a4:120
+rs2=a5:136
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 120 136   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = 120
+=========================
+pc=9 : sw a5,s0,-20
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:136
+rs2=s0:60
+offset=-20
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 120 136   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = -120
+=========================
+pc=10 : lw a5,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:16
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 120  16   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = -120
+=========================
+pc=11 : addi a5,a5,1
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=a5:17
+imm=1
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 120  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = -120
+=========================
+pc=12 : sw a5,s0,-24
+rs1=:0
+rs2=:0
+offset=
+------------
+rs1=a5:17
+rs2=s0:60
+offset=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0 120  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = -120
+=========================
+pc=13 : lw a4,s0,-24
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a4:17
+rs1=s0:60
+imm=-24
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  17  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = -120
+=========================
+pc=14 : addi a5, zero, 17
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:17
+rs1=zero:0
+imm=17
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  17  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = -120
+=========================
+pc=15 : blt a4,a5,-9
+rs1=:0
+rs2=:0
+offset
+------------
+rs1=a4:17
+rs2=a5:17
+offset-9
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  17  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = -120
+=========================
+pc=16 : addi a5, zero, 0
+rd=:0
+rs1=:0
+imm=
+------------
+rd=a5:0
+rs1=zero:0
+imm=0
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = -120
+=========================
+pc=17 : add a0, a5, zero
+rd=:0
+rs1=:0
+rs2=:0
+------------
+rd=a0:0
+rs1=a5:0
+rs2=zero:0
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0  60   0   0   0   0   0  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = -120
+=========================
+pc=18 : lw s0,sp,28
+rd=:0
+rs1=:0
+imm=
+------------
+rd=s0:0
+rs1=sp:28
+imm=28
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  28   0   0   0   0   0   0   0   0   0   0   0  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = -120
+=========================
+pc=19 : addi sp,sp,32
+rd=:0
+rs1=:0
+imm=
+------------
+rd=sp:60
+rs1=sp:60
+imm=32
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  60   0   0   0   0   0   0   0   0   0   0   0  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = -120
+=========================
+ ze  ra  sp  gp  tp  t0  t1  t2  s0  s1  a0  a1  a2  a3  a4  a5  a6  a7  s2  s3  s4  s5  s6  s7  s8  s9 s10 s11  t3  t4  t5  t6 
+  0  20  60   0   0   0   0   0   0   0   0   0   0   0  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
+sum = -120
+num of instrs: 182
