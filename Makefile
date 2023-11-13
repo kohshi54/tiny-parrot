@@ -18,8 +18,13 @@ all :  $(OBJ_DIR) $(DEP_DIR) $(NAME)
 $(OBJ_DIR) $(DEP_DIR) :
 	@mkdir -p $@
 
+ifdef DEBUG
+$(OBJ_DIR)%.o: %.cpp
+	$(CC) -DDEBUG $(CXXFLAGS) $(DEPFLAGS) $(INCLUDES) -c $< -o $@
+else
 $(OBJ_DIR)%.o: %.cpp
 	$(CC) $(CXXFLAGS) $(DEPFLAGS) $(INCLUDES) -c $< -o $@
+endif
 
 $(NAME) : $(OBJS)
 	$(CC) $(CXXFLAGS) $(OBJS) -o $(NAME)
@@ -33,8 +38,9 @@ fclean : clean
 
 re : fclean all
 
-test : 
+debug :
+	@make DEBUG=1
 
 -include $(DEPS)
 
-.PHONY : clean fclean re all test
+.PHONY : clean fclean re all test debug

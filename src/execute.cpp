@@ -126,11 +126,6 @@ bool execute_s_type(std::string offset, std::string rs2, std::string rs1, std::s
 {
     if (!opcode.compare("sw"))
     {
-        // sw, rs1, rs2, offset -> mem[rs2 + offset] = rs1
-        // std::cout << "rs1:" << regs.read(rs1) << std::endl;
-        // std::cout << "rs2:" << regs.read(rs2) << std::endl;
-        // std::cout << "offset:" << stoi(offset) << std::endl;
-        // std::cout << regs.read(rs1) + (int32_t)stoi(offset) << std::endl;
         datamem.write_memory(regs.read(rs1), regs.read(rs2) + (int32_t)stoi(offset));
     }
     else if (!opcode.compare("sh"))

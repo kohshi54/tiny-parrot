@@ -19,15 +19,19 @@ int main(int argc, char *argv[])
     size_t count = 0;
     while (regs.pc / 4 < instrmem.instr_memory.size())
     {
+    #ifdef DEBUG
         std::cout << "pc=" << regs.pc / 4 + 1 << " : " << instrmem.instr_memory[regs.pc / 4] << std::endl;
+    #endif
         if (!decode(instrmem.instr_memory[regs.pc / 4]))
         {
             std::cout << "exception occurred, abort." << std::endl;
             return (1);
         }
+    #ifdef DEBUG
         regs.dump_registers();
         std::cout << "sum = " << datamem.read_memory(1,40) << std::endl;
         std::cout << "=========================" << std::endl;
+    #endif
         regs.pc += 4; // modify this to 4 byte alligned later. -> done.
         count++;
     }
